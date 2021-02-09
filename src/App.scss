@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* Home组件 */
+.div_home_wrapper{
+  width: 100%;
+  height: 100%;
+  // background-image:url("https://bing.ioliu.cn/v1/?d=1&w=5456&h=3632") ;
+  // background: url('https://bing.ioliu.cn/v1/?d=0&w=5456&h=3632');
+}
+
+.bingImg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+
+//遮罩
+.div_mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.3;
+  z-index: -1;
+  // z-index: 99;
+
+  width: 100%;
+  height: 100%;
+}
+
+.div_deepMask{
+  z-index: 99;
+  opacity: 0.6;
+
+}
+
+
+//设置组件，侧边栏
+.div_set_wrapper{
+  // height: 100%;
+  width: 420px;
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: #555 0 0 10px;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="tianjia" unicode="&#58930;" d="M1026.557 298.026 603.093 298.026l0-423.464L433.706-125.438 433.706 298.026 10.24 298.026 10.24 467.413l423.466 0L433.706 890.88l169.387 0 0-423.466 423.464 0L1026.557 298.026z"  horiz-adv-x="1027" />
+
+    
+
+
+  </font>
+</defs></svg>

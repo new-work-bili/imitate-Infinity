@@ -1,0 +1,141 @@
+//添加搜索引擎
+.div_YinQingAdd_wrapper {
+    background-color: #ededed;
+
+    //选项卡
+    .div_label_wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 45px;
+        line-height: 45px;
+        background-color: #d8d8d8;
+        & > div {
+            width: 50%;
+        }
+        & > div:hover {
+            cursor: pointer;
+        }
+        .labelAction {
+            background-color: #ededed;
+            & > span {
+                width: 50px;
+                padding-bottom: 3px;
+                border-bottom: 3px solid #2ecc71;
+            }
+        }
+    }
+
+    //
+}
+
+//头部
+.div_setHeader_wrapper {
+    background-color: #fff;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.5rem;
+    position: relative;
+    .div_closeButton {
+        position: absolute;
+        height: 70px;
+        line-height: 70px;
+        right: 5px;
+        top: 0;
+        color: #b6b6b6;
+        .span_closeButton {
+            font-size: 1.5rem;
+        }
+    }
+    .div_closeButton:hover {
+        cursor: pointer;
+    }
+}
+
+//自定义添加的搜索引擎 的DIY模板的css
+.div_diyWrapper_wrapper {
+    background-color: #fff;
+    display: flex;
+    width: 420px;
+    height: 600px;
+    padding: 45px 0 0;
+    text-align: left;
+    .div_DIYIcon_wrapper {
+        width: 30%;
+        height: 100%;
+        //
+        .div_YinQingIcon_defaultIcon {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background-color: #df5f47;
+            margin: 0 auto;
+        }
+    }
+
+    .div_setFrom_wrapper {
+        width: 70%;
+
+        .div_from {
+            input {
+                outline-style: none;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                padding: 13px 14px;
+                width: 620px;
+                font-size: 14px;
+                font-weight: 700;
+                font-family: "Microsoft soft";
+            }
+        }
+
+        .div_confirmButton {
+            margin-top: 20px;
+            button {
+                color: #2ecc71;
+                border-color: #7fe3ae;
+                width: 100%;
+                background-color: #fff;
+                padding: 5px;
+            }
+            button:hover {
+                cursor: pointer;
+            }
+        }
+        //颜色筛选
+        .div_iconColor_wrapper {
+            display: flex;
+            .div_selectIconColor_item {
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+                border-radius: 50%;
+                position: relative;
+
+                & > i {
+                    // display: block;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    margin: auto;
+                    display: none;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                }
+            }
+            .div_selectIconColor_item:hover {
+                cursor: pointer;
+            }
+            .is {
+                & > i {
+                    display: none;
+                }
+            }
+            .Action {
+                // background-color: #fff;
+            }
+        }
+    }
+}

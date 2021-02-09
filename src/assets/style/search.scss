@@ -1,0 +1,158 @@
+.input_searchInput {
+    border-top-right-radius: 2.55283px;
+    border-bottom-right-radius: 2.55283px;
+    opacity: 1;
+}
+
+.div_search_wrapper {
+    margin-top: 120px;
+    width: 100%;
+
+    .div_search_wrapperIn {
+        width: 50%;
+        margin: 0 auto 0;
+    }
+}
+
+.ul_searchType {
+    display: flex;
+    width: 650px;
+    margin: 0 auto 0;
+    .li_searchType {
+        width: 75px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1.25rem;
+    }
+    .li_searchType:hover {
+        cursor: pointer;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    //选中
+    .li_searchType_action {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+// input
+.div_searchInput {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    //表单元素
+    .input_searchInput {
+        border: none;
+        border-radius: 3px;
+        padding: 13px 14px;
+        width: 92%;
+        box-sizing: border-box;
+
+        font-size: 14px;
+        font-weight: 700;
+        font-family: "Microsoft soft";
+    }
+    .input_searchInput:focus {
+        outline: 0;
+    }
+    //联想词容器
+    .div_searchWord_wrapper {
+        // display: none;
+        width: 100%;
+        li {
+        }
+        li:hover {
+            cursor: pointer;
+            background-color: #ededed;
+        }
+    }
+
+    //选择搜索引擎 按钮
+    .button_icon_wrapper {
+        border: none;
+        height: 47px;
+        // width: 56px;
+        width: 8%;
+        background-color: #fff;
+
+        .div_icon {
+            height: 30px;
+            width: 30px;
+            border: none;
+            display: inline-block;
+            vertical-align: middle;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-image: url("https://infinity-permanent.infinitynewtab.com/infinity/search-add/baidu.png?imageView2/0/format/webp/q/100/_=1018");
+        }
+    }
+}
+
+//选择搜索引擎
+.div_yinqingIcon_wrapper {
+    margin-top: 10px;
+    background-color: #fff;
+    z-index: 100;
+    position: relative;
+    width: 100%;
+
+    .ul_yinqingIcon {
+        display: flex;
+        flex-wrap: wrap;
+        .li_yinqingIcon {
+            box-sizing: border-box;
+            //六等分；并实现等宽等高
+            width: 16.66667%;
+            padding-bottom: 16.66667%;
+            height: 0;
+            position: relative;
+
+            border-right: 1px #333 solid;
+            border-bottom: 1px #333 solid;
+            & > div {
+                width: 100%;
+                height: 100%;
+
+                & > .div_addIcon_wrapper {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .icon {
+                background-color: transparent;
+                width: 25px;
+                height: 25px;
+                margin-bottom: 5px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .text {
+                color: #5c5c5c;
+            }
+        }
+
+        .li_yinqingIcon:hover {
+            cursor: pointer;
+            background-color: #f3f3f3;
+            & > div > .div_deleteButton {
+                background-color: #b6b6b6;
+                display: block;
+            }
+        }
+
+        //删除按钮
+        .div_deleteButton {
+            display: none;
+            position: absolute;
+            right: 0;
+        }
+    }
+}

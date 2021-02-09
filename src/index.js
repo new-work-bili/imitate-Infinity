@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './assets/style/reset.scss'
+import axios from './http/axios'
+import './assets/icon/iconfont.css'
+import {Provider}  from "react-redux";
+import store from "./redux/store"; 
+React.Component.prototype.axios = axios;
+
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,16 @@
+{
+  "id": "2318810",
+  "name": "仿写Infti",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "834363",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    }
+  ]
+}
