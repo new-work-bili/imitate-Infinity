@@ -53,15 +53,17 @@ function useInput({ actionYinQingName, yinqingList }) {
                     if (e.keyCode === 13) return jump(inputValue, e);
                 }}
             />
-            <div className="div_searchWord_wrapper">
-                {wordList.map((item) => {
-                    return (
-                        <li key={item} onClick={(e) => jump(item, e)}>
-                            {item}
-                        </li>
-                    );
-                })}
-            </div>
+            {inputValue && (
+                <div className="div_searchWord_wrapper">
+                    {wordList.map((item) => {
+                        return (
+                            <li key={item} onClick={(e) => jump(item, e)}>
+                                {item}
+                            </li>
+                        );
+                    })}
+                </div>
+            )}
         </>
     );
 }

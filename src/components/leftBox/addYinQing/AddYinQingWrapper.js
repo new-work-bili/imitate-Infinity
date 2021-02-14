@@ -12,7 +12,7 @@ class YinQingAdd extends PureComponent {
     }
 
     close = () => {
-        this.props.changeSetShow();
+        this.props.changeSetShow(false);
     };
     //自定义搜索引擎，点击确定
     confirm_click = (formData, actionColor) => {
@@ -28,7 +28,7 @@ class YinQingAdd extends PureComponent {
         //添加
         this.props.addYinQing({ ...formData, actionColor });
         //关闭侧导航栏
-        this.props.changeSetShow();
+        this.props.changeSetShow(false);
     };
     render() {
         return (

@@ -4,7 +4,6 @@ import WebsetConnet from "../connet/set/SetConnet";
 import React, { PureComponent, useState, useEffect } from "react";
 
 export default function useLeftBox({ setShow }) {
-    // const { setShow } = this.props;
     return (
         <div>
             {(setShow == "WebSet" || setShow == "YinQingAdd") && (

@@ -1,7 +1,5 @@
-import store from "../../redux/store";
+// import store from "../../redux/store";
 import React, { PureComponent } from "react";
-import { connect } from "react-redux";
-import { mapStateToProps, mapDispatchToProps } from "../../redux/map";
 
 //图标Item
 function IconItem(props) {
@@ -60,7 +58,8 @@ class yinqingIcon extends PureComponent {
 
     //添加搜索引擎，打开自定义界面
     addYinqing = () => {
-        store.dispatch({ type: "changeSetShow", data: "YinQingAdd" });
+        // store.dispatch({ type: "changeSetShow", data: "YinQingAdd" });
+        this.props.changeSetShow("YinQingAdd");
     };
     render() {
         const { data, click } = this.props;
@@ -89,4 +88,4 @@ class yinqingIcon extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(yinqingIcon);
+export default yinqingIcon;

@@ -1,12 +1,7 @@
 import React, { PureComponent } from "react";
 import jsonP from "../http/func";
-// import JsonP from "jsonp";
 import Search from "./Search";
-import leftBox from "./LeftBox";
-import { connect } from "react-redux";
-import { mapStateToProps, mapDispatchToProps } from "../redux/map";
-
-const LeftBox = connect(mapStateToProps, mapDispatchToProps)(leftBox);
+import LeftBox from "../connet/LeftBoxConnet";
 class Home extends PureComponent {
     constructor(props) {
         super(props);
@@ -38,7 +33,6 @@ class Home extends PureComponent {
         this.getData(1);
     }
     render() {
-        const { setShow } = this.props;
         return (
             <div className="div_home_wrapper">
                 {/* 搜索 */}
@@ -54,4 +48,4 @@ class Home extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;

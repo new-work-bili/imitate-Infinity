@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import "../../assets/style/search.scss";
-import YinQingBox from "./yinqingIconBox";
+import YinQingBox from "../../connet/search/yinqingIconBoxConnet";
+
 import Input from "./input";
 
 class index extends PureComponent {
@@ -59,6 +60,11 @@ class index extends PureComponent {
     render() {
         const { defaultClass } = this.state;
         const { yinqingList, actionYinQingName } = this.props;
+        console.log(
+            "yinqingList, actionYinQingName:",
+            yinqingList,
+            actionYinQingName
+        );
         return (
             <div className={this.props.className}>
                 <div className="div_search_wrapperIn">

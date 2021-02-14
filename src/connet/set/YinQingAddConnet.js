@@ -9,11 +9,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changeSetShow: () => {
+        changeSetShow: (data) => {
             console.log(2);
-            dispatch({ type: "changeSetShow", data: false });
+            dispatch({ type: "changeSetShow", data: data });
         },
         addYinQing: (data) => {
+            console.log("ddd");
             dispatch({ type: "AddYinqing", data: data });
         },
     };

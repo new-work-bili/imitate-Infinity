@@ -1,4 +1,5 @@
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
+import BottomReducer from "../reducer/BottomWebBoxReducer";
 
 //localStorage中存储的数据进行初始化判断
 const yinqingList_local = localStorage.getItem("yinqingList");
@@ -44,12 +45,13 @@ var initData = {
             ? "百度"
             : JSON.parse(actionYinQingName_local),
 };
-
-const reducer = (state, action) => {
+console.log(initData.yinqingList);
+const reducer = (state = initData, action) => {
     switch (action.type) {
         case "changeMaskShow":
             return { ...state, maskShow: !state.maskShow, num: state.num + 1 };
         case "AddYinqing":
+            // console.log('addYinqing');
             var yinqingList = state.yinqingList;
             yinqingList.push(action.data);
 
@@ -58,7 +60,7 @@ const reducer = (state, action) => {
         case "DeleteYinqing":
             var yinqingList = [];
             state.yinqingList.forEach((item) => {
-                if (item.name != action.name) {
+                if (item.name !== action.name) {
                     yinqingList.push(item);
                 }
             });
@@ -66,6 +68,7 @@ const reducer = (state, action) => {
             localStorage.setItem("yinqingList", JSON.stringify(yinqingList));
             return { ...state, yinqingList: yinqingList };
         case "changeSetShow":
+            console.log(state.setShow);
             return { ...state, setShow: action.data };
         case "setActionYinQingName":
             localStorage.setItem(
@@ -77,6 +80,14 @@ const reducer = (state, action) => {
             return state;
     }
 };
+console.log(BottomReducer);
 
-const store = createStore(reducer, initData);
+// const store = createStore(
+//     combineReducers({
+//         reducer,
+//         BottomReducer,
+//     })
+// );
+
+const store = createStore(reducer);
 export default store;
