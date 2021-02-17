@@ -1,9 +1,9 @@
 import LeftBox from "../page/LeftBox";
 import { connect } from "react-redux";
 
-const mapStateToProps = (state, action) => {
+const mapStateToProps = (state) => {
     return {
-        setShow: state.setShow,
+        setShow: state.reducer.setShow,
     };
 };
 

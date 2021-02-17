@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
     return {
-        yinqingList: state.yinqingList,
+        yinqingList: state.reducer.yinqingList,
     };
 };
 

@@ -2,11 +2,11 @@ import Search from "../../components/search/index";
 import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
-    console.log(state.yinqingList);
+    console.log(state);
     return {
-        maskShow: state.maskShow,
-        yinqingList: state.yinqingList,
-        actionYinQingName: state.actionYinQingName,
+        maskShow: state.reducer.maskShow,
+        yinqingList: state.reducer.yinqingList,
+        actionYinQingName: state.reducer.actionYinQingName,
     };
 };
 

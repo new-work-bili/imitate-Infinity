@@ -77,17 +77,17 @@ const reducer = (state = initData, action) => {
             );
             return { ...state, actionYinQingName: action.data };
         default:
+            console.log(state);
             return state;
     }
 };
-console.log(BottomReducer);
 
-// const store = createStore(
-//     combineReducers({
-//         reducer,
-//         BottomReducer,
-//     })
-// );
+const store = createStore(
+    combineReducers({
+        reducer,
+        BottomReducer,
+    })
+);
 
-const store = createStore(reducer);
+// const store = createStore(reducer);
 export default store;

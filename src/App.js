@@ -3,16 +3,14 @@ import "./App.scss";
 import Home from "./page/Home";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "./redux/map";
-import store from "./redux/store";
-import axios from "./http/axios";
 
 function App(props) {
-    const { maskShow, changeMaskShow, setShow } = props;
+    const { maskShow, changeMaskShow, changeSetShow, setShow } = props;
     //点击mask，隐藏搜索引擎选择框
     function clickMask(e) {
         if (setShow === "YinQingAdd") {
             //隐藏侧导航栏
-            store.dispatch({ type: "changeSetShow", data: false });
+            changeSetShow(false);
         } else if (!setShow) {
             //隐藏mask
             changeMaskShow();

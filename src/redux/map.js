@@ -1,10 +1,8 @@
-import store from "./store";
-
-const mapStateToProps = (store) => {
+const mapStateToProps = (state) => {
     return {
-        maskShow: store.maskShow,
-        yinqingList: store.yinqingList,
-        setShow: store.setShow,
+        maskShow: state.reducer.maskShow,
+        yinqingList: state.reducer.yinqingList,
+        setShow: state.reducer.setShow,
     };
 };
 
@@ -15,6 +13,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             dispatch({
                 type: "changeMaskShow",
             });
+        },
+        changeSetShow: (data) => {
+            dispatch({ type: "changeSetShow", data: data });
         },
         DeleteYinqing: (name) => {
             console.log(555);
